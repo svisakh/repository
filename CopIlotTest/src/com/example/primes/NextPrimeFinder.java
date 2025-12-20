@@ -20,7 +20,7 @@ public final class NextPrimeFinder {
      * @param n input integer
      * @return next prime strictly greater than n
      */
-    public static int nextPrime(int n) {
+    public static int nextPrime(final int n) {
         long candidate = (long) n + 1L;
         if (candidate <= 2) {
             return 2;
@@ -45,7 +45,7 @@ public final class NextPrimeFinder {
         if (x < 2) return false;
         if (x == 2 || x == 3) return true;
         if (x % 2 == 0) return false;
-        long r = (long) Math.sqrt(x);
+        final long r = (long) Math.sqrt(x);
         for (long i = 3; i <= r; i += 2) {
             if (x % i == 0) return false;
         }

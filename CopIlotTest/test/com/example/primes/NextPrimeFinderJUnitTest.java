@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit 5 tests for NextPrimeFinder.
  * Place this file under your test source root (maven/gradle: src/test/java) and run with JUnit 5.
  */
-public class NextPrimeFinderJUnitTest {
+public final class NextPrimeFinderJUnitTest {
 
     @Test
-    public void testSmallNumbers() {
+    public final void testSmallNumbers() {
         assertEquals(2, NextPrimeFinder.nextPrime(-10));
         assertEquals(2, NextPrimeFinder.nextPrime(0));
         assertEquals(2, NextPrimeFinder.nextPrime(1));
@@ -19,7 +19,7 @@ public class NextPrimeFinderJUnitTest {
     }
 
     @Test
-    public void testTypicalCases() {
+    public final void testTypicalCases() {
         assertEquals(17, NextPrimeFinder.nextPrime(14));
         assertEquals(19, NextPrimeFinder.nextPrime(17));
         assertEquals(101, NextPrimeFinder.nextPrime(100));
@@ -28,13 +28,13 @@ public class NextPrimeFinderJUnitTest {
     }
 
     @Test
-    public void testEdgeNearIntegerMax() {
+    public final void testEdgeNearIntegerMax() {
         // next prime after 2147483637 is 2147483647 (Integer.MAX_VALUE)
         assertEquals(2147483647, NextPrimeFinder.nextPrime(2147483637));
     }
 
     @Test
-    public void testThrowsWhenNoPrimeRemaining() {
+    public final void testThrowsWhenNoPrimeRemaining() {
         // If we pass Integer.MAX_VALUE the method searches > Integer.MAX_VALUE and should throw
         assertThrows(IllegalArgumentException.class, () -> NextPrimeFinder.nextPrime(Integer.MAX_VALUE));
     }
