@@ -2,9 +2,6 @@ package com.example.primes;
 
 public final class NextPrimeFinderTest {
     public static void main(final String[] args) {
-        if (args == null) {
-            throw new IllegalArgumentException("Arguments cannot be null");
-        }
         final int[] tests = { -5, 0, 1, 2, 3, 14, 17, 100, 1000, 1000000, Integer.MAX_VALUE - 10 };
         for (final int t : tests) {
             try {
