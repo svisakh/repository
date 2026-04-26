@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit 5 tests for NextPrimeFinder.
  * Place this file under your test source root (maven/gradle: src/test/java) and run with JUnit 5.
  */
-public class NextPrimeFinderJUnitTest {
+public final class NextPrimeFinderJUnitTest {
 
     @Test
     public void testSmallNumbers() {

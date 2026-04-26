@@ -1,23 +1,23 @@
 package com.example.primes;
 
-public class NextPrimeFinderTest {
-    public static void main(String[] args) {
-        int[] tests = { -5, 0, 1, 2, 3, 14, 17, 100, 1000, 1000000, Integer.MAX_VALUE - 10 };
-        for (int t : tests) {
+public final class NextPrimeFinderTest {
+    public static void main(final String[] args) {
+        final int[] tests = { -5, 0, 1, 2, 3, 14, 17, 100, 1000, 1000000, Integer.MAX_VALUE - 10 };
+        for (final int t : tests) {
             try {
-                int p = NextPrimeFinder.nextPrime(t);
+                final int p = NextPrimeFinder.nextPrime(t);
                 System.out.printf("nextPrime(%d) = %d\n", t, p);
-            } catch (IllegalArgumentException e) {
+            } catch (final IllegalArgumentException e) {
                 System.out.printf("nextPrime(%d) -> error: %s\n", t, e.getMessage());
             }
         }
 
         // sanity check near Integer.MAX_VALUE
-        int near = Integer.MAX_VALUE - 1000;
+        final int near = Integer.MAX_VALUE - 1000;
         try {
-            int p = NextPrimeFinder.nextPrime(near);
+            final int p = NextPrimeFinder.nextPrime(near);
             System.out.printf("nextPrime(%d) = %d\n", near, p);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             System.out.printf("nextPrime(%d) -> %s\n", near, e.toString());
         }
     }
