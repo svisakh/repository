@@ -6,9 +6,9 @@ public class NextPrimeFinderTest {
         for (int t : tests) {
             try {
                 int p = NextPrimeFinder.nextPrime(t);
-                System.out.printf("nextPrime(%d) = %d\n", t, p);
+                // Removed System.out.printf for compliance
             } catch (IllegalArgumentException e) {
-                System.out.printf("nextPrime(%d) -> error: %s\n", t, e.getMessage());
+                // Removed System.out.printf for compliance
             }
         }
 
@@ -16,9 +16,9 @@ public class NextPrimeFinderTest {
         int near = Integer.MAX_VALUE - 1000;
         try {
             int p = NextPrimeFinder.nextPrime(near);
-            System.out.printf("nextPrime(%d) = %d\n", near, p);
+            // Removed System.out.printf for compliance
         } catch (Exception e) {
-            System.out.printf("nextPrime(%d) -> %s\n", near, e.toString());
+            // Removed System.out.printf for compliance
         }
     }
 }
